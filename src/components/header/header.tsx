@@ -1,7 +1,6 @@
 import "./header.css";
 import sun from "../../assets/icon-sun.svg";
 import dark from "../../assets/dark.svg";
-import searchIcon from "../../assets/icon-search.svg";
 
 export default function Header(props: {
   username: string;
