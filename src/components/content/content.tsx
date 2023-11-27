@@ -32,16 +32,18 @@ export default function Content(props: {
           >
             {props.users.name == null ? props.users.login : props.users.name}
           </span>
-          <span className="login">{props.users.login}</span>
-          <span className={`join-date ${props.lightMode ? "for-text" : null}`}>
-            Joined {props.users.created_at.slice(8, 10)} -{" "}
-            {props.users.created_at.slice(5, 7)} -{" "}
+          <span className="login glb">{props.users.login}</span>
+          <span
+            className={`join-date glb ${props.lightMode ? "for-text" : null}`}
+          >
+            Joined {props.users.created_at.slice(8, 10)}-
+            {props.users.created_at.slice(5, 7)}-
             {props.users.created_at.slice(0, 4)}
           </span>
         </div>
       </div>
       <div className="text-div">
-        <span className={`text  ${props.lightMode ? "for-text" : null}`}>
+        <span className={`text glb ${props.lightMode ? "for-text" : null}`}>
           {props.users.bio == null
             ? "This profile has no bio"
             : props.users.bio}
@@ -50,7 +52,7 @@ export default function Content(props: {
       <div
         className={`account ${props.lightMode ? "back-color-for-box" : null}`}
       >
-        <div className="repos flex ">
+        <div className="repos flex glb ">
           <span
             style={
               props.lightMode == true
@@ -69,7 +71,7 @@ export default function Content(props: {
             {props.users.public_repos}
           </span>
         </div>
-        <div className="followers flex">
+        <div className="followers flex glb">
           <span
             style={
               props.lightMode == true
@@ -88,7 +90,7 @@ export default function Content(props: {
             {props.users.followers}
           </span>
         </div>
-        <div className="following flex">
+        <div className="following flex glb">
           <span
             style={
               props.lightMode == true
@@ -112,6 +114,7 @@ export default function Content(props: {
         <div className="location x">
           <img src={location} />
           <span
+            className="glb"
             style={
               props.lightMode == true ? { color: "var(--black)" } : undefined
             }
@@ -123,7 +126,7 @@ export default function Content(props: {
         </div>
         <div className="website x">
           <img src={website} />
-          <span>
+          <span className="glb">
             {" "}
             <a
               href={props.users.html_url}
@@ -140,7 +143,7 @@ export default function Content(props: {
         </div>
         <div className="twitter x">
           <img src={twitter} />
-          <span>
+          <span className="glb">
             <a
               href={`https://twitter.com/${props.users.twitter_username}`}
               target="_blank"
@@ -160,6 +163,7 @@ export default function Content(props: {
         <div className="company x">
           <img src={company} />
           <span
+            className="glb"
             style={
               props.lightMode == true ? { color: "var(--black)" } : undefined
             }

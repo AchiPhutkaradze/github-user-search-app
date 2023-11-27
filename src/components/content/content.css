@@ -45,9 +45,9 @@
 .footer {
   margin-top: 50px;
   display: flex;
-  flex-direction: column;
   gap: 20px;
   color: var(--white);
+  flex-direction: column;
 }
 #person-img {
   border-radius: 70px;
@@ -98,4 +98,41 @@ a {
 .btn {
   width: 100px;
   height: 100px;
+}
+@media screen and (min-width: 768px) {
+  .main {
+    padding: 40px;
+    height: 100%;
+    margin-top: 24px;
+  }
+  .person {
+    gap: 41px;
+  }
+  #person-img {
+    width: 117px;
+    height: 117px;
+    border-radius: 117px;
+  }
+  .f-s {
+    font-size: 21px;
+  }
+  .glb {
+    font-size: 14px;
+  }
+  .account {
+    margin: 0 7px 0 0;
+    padding: 0 93px 0 32px;
+    justify-content: space-between;
+    gap: 0;
+  }
+  .footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .x {
+    display: flex;
+    gap: 19.247px;
+    font-size: 13px;
+    font-weight: 400;
+  }
 }

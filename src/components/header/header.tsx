@@ -1,6 +1,7 @@
 import "./header.css";
 import sun from "../../assets/icon-sun.svg";
 import dark from "../../assets/dark.svg";
+import searchIcon from "../../assets/icon-search.svg";
 
 export default function Header(props: {
   username: string;
@@ -54,7 +55,8 @@ export default function Header(props: {
           }`}
           onChange={(e) => props.setUserName(e.target.value)}
           value={props.username}
-        ></input>
+          placeholder={"Search GitHub username…"}
+        />
         <button className="search-btn " onClick={githubUsers}>
           Search
         </button>
