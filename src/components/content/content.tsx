@@ -13,6 +13,25 @@ export default function Content(props: {
   lightMode: any;
   setLightMode: React.Dispatch<React.SetStateAction<string>>;
 }) {
+  const date = () => {
+    const time = new Date(props.users.created_at);
+    const monthNAmes = [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ];
+    const month = monthNAmes[time.getMonth()];
+    return month;
+  };
   return (
     <main className={`main ${props.lightMode ? "color-for-main" : null}`}>
       <div className="person">
@@ -36,8 +55,7 @@ export default function Content(props: {
           <span
             className={`join-date glb ${props.lightMode ? "for-text" : null}`}
           >
-            Joined {props.users.created_at.slice(8, 10)}-
-            {props.users.created_at.slice(5, 7)}-
+            Joined {props.users.created_at.slice(8, 10)} {date()}{" "}
             {props.users.created_at.slice(0, 4)}
           </span>
         </div>

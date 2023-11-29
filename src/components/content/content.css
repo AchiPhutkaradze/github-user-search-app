@@ -99,6 +99,10 @@ a {
   width: 100px;
   height: 100px;
 }
+.stl {
+  width: 100px;
+  height: 100px;
+}
 @media screen and (min-width: 768px) {
   .main {
     padding: 40px;
