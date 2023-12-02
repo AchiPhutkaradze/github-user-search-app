@@ -7,11 +7,11 @@ import company from "../../assets/icon-company.svg";
 
 export default function Content(props: {
   users: any;
-  setUsers: React.Dispatch<React.SetStateAction<string>>;
+  setUsers: React.Dispatch<React.SetStateAction<object>>;
   username: string;
   setUsername: React.Dispatch<React.SetStateAction<string>>;
-  lightMode: any;
-  setLightMode: React.Dispatch<React.SetStateAction<string>>;
+  lightMode: boolean;
+  setLightMode: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
   const date = () => {
     const time = new Date(props.users.created_at);
@@ -32,6 +32,7 @@ export default function Content(props: {
     const month = monthNAmes[time.getMonth()];
     return month;
   };
+  console.log(props.users);
   return (
     <main className={`main ${props.lightMode ? "color-for-main" : null}`}>
       <div className="person">

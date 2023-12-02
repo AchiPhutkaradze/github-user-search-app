@@ -7,7 +7,7 @@ import data from "./data.json";
 function App() {
   const [username, setUserName] = useState<string>("");
   const [users, setUsers] = useState<any>(data);
-  const [lightMode, setLightMode] = useState<any>(false);
+  const [lightMode, setLightMode] = useState<boolean>(false);
   return (
     <div className={`container ${lightMode ? " back-color" : null}`}>
       <Header

@@ -29,4 +29,9 @@
     padding: 140px 98px 236px 97px;
     height: 100%;
   }
+  @media screen and (min-width: 1440px) {
+    .container {
+      padding: 144px 355px 170px;
+    }
+  }
 }
