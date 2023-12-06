@@ -1,10 +1,10 @@
 .main {
   background-color: var(--indigo);
-  height: 517px;
   width: 100%;
   margin-top: 16px;
   border-radius: 15px;
   padding: 33px 0 49px 24px;
+  overflow: hidden;
 }
 .three-text {
   color: var(--white);
@@ -14,10 +14,9 @@
 .person {
   display: flex;
   gap: 20px;
-  align-items: center;
 }
 .text-div {
-  padding: 33px 0 23px 0;
+  margin: 33px 0px 23px -89px;
 }
 .flex {
   display: flex;
@@ -103,11 +102,16 @@ a {
   width: 100px;
   height: 100px;
 }
+.name-login {
+  flex-direction: column;
+  display: flex;
+}
+
 @media screen and (min-width: 768px) {
   .main {
     padding: 40px;
-    height: 100%;
     margin-top: 24px;
+    width: 730px;
   }
   .person {
     gap: 41px;
@@ -138,5 +142,54 @@ a {
     gap: 19.247px;
     font-size: 13px;
     font-weight: 400;
+  }
+  .text-div {
+    padding: 0;
+    margin: 57px 0px 23px -142px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .main {
+    margin-top: 24px;
+    padding: 44px 48px 48px 202px;
+    width: 800px;
+  }
+  .person {
+    gap: 37px;
+    margin-left: -153px;
+  }
+
+  .name-login {
+    display: flex;
+    flex-direction: column;
+  }
+  .person {
+    align-items: inherit;
+  }
+
+  .text-div {
+    padding: 0 48px 32px 0;
+  }
+  .date {
+    display: flex;
+    flex-direction: column;
+    margin: -50px 0px 0px 363px;
+  }
+  .text-div {
+    padding: 48px 25px 29px 0px;
+    margin: 0;
+  }
+  .f-s {
+    font-size: 26px;
+  }
+  .glb {
+    font-size: 16px;
+  }
+  .footer {
+    margin-top: 37px;
+  }
+  .website:hover {
+    text-decoration: underline;
   }
 }

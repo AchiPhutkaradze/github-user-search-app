@@ -8,6 +8,8 @@ function App() {
   const [username, setUserName] = useState<string>("");
   const [users, setUsers] = useState<any>(data);
   const [lightMode, setLightMode] = useState<boolean>(false);
+  console.log();
+
   return (
     <div className={`container ${lightMode ? " back-color" : null}`}>
       <Header

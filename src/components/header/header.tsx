@@ -7,7 +7,7 @@ export default function Header(props: {
   setUserName: React.Dispatch<React.SetStateAction<string>>;
   users: any;
   setUsers: React.Dispatch<React.SetStateAction<string>>;
-  lightMode: any;
+  lightMode: boolean;
   setLightMode: React.Dispatch<any>;
 }) {
   const githubUsers = async () => {
@@ -19,7 +19,6 @@ export default function Header(props: {
       props.setUsers(data);
     }
   };
-
 
   return (
     <>
@@ -36,13 +35,13 @@ export default function Header(props: {
           }}
         >
           <div className="background">
-            <span className="LIGHT">
-              {props.lightMode == true ? "DARK" : "LIGHT"}
-            </span>
+            <span
+              className={`light ${props.lightMode == true ? "dark" : ""}`}
+            ></span>
             {props.lightMode == false ? (
-              <img src={sun} alt="sun-icon" />
+              <img src={sun} id="sun-icon" />
             ) : (
-              <img src={dark} alt="sun-icon" />
+              <img src={dark} id="dark-icon" />
             )}
           </div>
         </button>
@@ -60,6 +59,11 @@ export default function Header(props: {
         <button className="search-btn " onClick={githubUsers}>
           Search
         </button>
+      </div>
+      <div className="error-div">
+        <span className="error">
+          {props.username != props.users.login ? "No results" : ""}
+        </span>
       </div>
     </>
   );

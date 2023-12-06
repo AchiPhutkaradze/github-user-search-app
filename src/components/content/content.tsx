@@ -32,9 +32,9 @@ export default function Content(props: {
     const month = monthNAmes[time.getMonth()];
     return month;
   };
-  console.log(props.users);
   return (
     <main className={`main ${props.lightMode ? "color-for-main" : null}`}>
+      {" "}
       <div className="person">
         <img
           src={
@@ -46,27 +46,31 @@ export default function Content(props: {
           id="person-img"
         />
         <div className="three-text">
-          <span
-            style={props.lightMode == true ? { color: "black" } : undefined}
-            className="Octocat f-s"
-          >
-            {props.users.name == null ? props.users.login : props.users.name}
-          </span>
-          <span className="login glb">{props.users.login}</span>
-          <span
-            className={`join-date glb ${props.lightMode ? "for-text" : null}`}
-          >
-            Joined {props.users.created_at.slice(8, 10)} {date()}{" "}
-            {props.users.created_at.slice(0, 4)}
-          </span>
+          <div className="name-login">
+            <span
+              style={props.lightMode == true ? { color: "black" } : undefined}
+              className="Octocat f-s"
+            >
+              {props.users.name == null ? props.users.login : props.users.name}
+            </span>
+            <span className="login glb">{props.users.login}</span>
+          </div>
+          <div className="date">
+            <span
+              className={`join-date glb ${props.lightMode ? "for-text" : null}`}
+            >
+              Joined {props.users.created_at.slice(8, 10)} {date()}{" "}
+              {props.users.created_at.slice(0, 4)}
+            </span>{" "}
+          </div>
+          <div className="text-div">
+            <span className={`text glb ${props.lightMode ? "for-text" : null}`}>
+              {props.users.bio == null
+                ? "This profile has no bio"
+                : props.users.bio}
+            </span>
+          </div>
         </div>
-      </div>
-      <div className="text-div">
-        <span className={`text glb ${props.lightMode ? "for-text" : null}`}>
-          {props.users.bio == null
-            ? "This profile has no bio"
-            : props.users.bio}
-        </span>
       </div>
       <div
         className={`account ${props.lightMode ? "back-color-for-box" : null}`}
