@@ -1,30 +1,67 @@
-# React + TypeScript + Vite
+# GitHub user search
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Roadmap
 
-Currently, two official plugins are available:
+- [Overview](#overview)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshots)
+  - [Links](#links)
 
-## Expanding the ESLint configuration
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+- [Author](#author)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Overview
 
-- Configure the top-level `parserOptions` property like this:
+### The challenge
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+### Users can
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+#### 1. Search for GitHub Profiles:
+
+- Use the search bar to find GitHub users by entering their usernames.
+
+#### 2. Toggle Light/Dark Mode:
+
+- Switch between light and dark modes for a personalized visual experience.
+
+#### 3. View User Details:
+
+- Explore detailed information about a user, including their name, login, join date, bio, repository count, followers, and following.
+
+#### 4. Access Additional User Information:
+
+- Check out location, website, Twitter handle, and company details if available.
+
+#### 5. Interact with GitHub Profile:
+
+- Click on the GitHub profile link to visit the user's GitHub page directly.
+
+### Screenshots
+
+![App Screenshot] (./src/assets/design/webPage.jpg)
+
+### Links
+
+- Solution URL: [GitHub Code](https://github.com/AchiPhutkaradze/github-user-search-app.git)
+- Live Site URL: [Live](https://github-user-search-app-seven-flame.vercel.app/)
+
+## My process
+
+### Built with
+
+- React.js with TypeScript
+- CSS Modules
+- GitHub API
+- CSS Grid
+- Mobile-first workflow
+
+### What I learned
+
+I improved my skills in React and Typescript and I learned better how to get information from API
+
+## author
+
+- Linkdin - [Achi Phitkaradze](https://www.linkedin.com/in/achi-phutkaradze-a629b7265/)
