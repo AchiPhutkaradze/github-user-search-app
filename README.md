@@ -41,7 +41,7 @@
 
 ### Screenshots
 
-![App Screenshot] (./src/assets/design/webPage.jpg)
+![App Screenshot](./src/assets/design/webPage.jpg)
 
 ### Links
 
