@@ -1,6 +1,7 @@
 import "./header.css";
 import sun from "../../assets/icon-sun.svg";
 import dark from "../../assets/dark.svg";
+import { useState } from "react";
 
 export default function Header(props: {
   username: string;
@@ -10,6 +11,8 @@ export default function Header(props: {
   lightMode: boolean;
   setLightMode: React.Dispatch<any>;
 }) {
+  const [isTrue, setIsTrue] = useState<number>(0);
+
   const githubUsers = async () => {
     const response = await fetch(
       `https://api.github.com/users/${props.username}`
@@ -17,9 +20,12 @@ export default function Header(props: {
     if (response.ok) {
       const data = await response.json();
       props.setUsers(data);
+      setIsTrue(0);
+    } else {
+      setIsTrue(1);
     }
   };
-
+  console.log(isTrue);
   return (
     <>
       <div className="header">
@@ -61,9 +67,7 @@ export default function Header(props: {
         </button>
       </div>
       <div className="error-div">
-        <span className="error">
-          {props.username != props.users.login ? "No results" : ""}
-        </span>
+        <span className="error">{isTrue === 1 ? "No results" : ""}</span>
       </div>
     </>
   );
