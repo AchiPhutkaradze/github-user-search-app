@@ -64,4 +64,4 @@ I improved my skills in React and Typescript and I learned better how to get inf
 
 ## author
 
-- Linkdin - [Achi Phitkaradze](https://www.linkedin.com/in/achi-phutkaradze-a629b7265/)
+- Linkdin - [Achi Phutkaradze](https://www.linkedin.com/in/achi-phutkaradze-a629b7265/)
